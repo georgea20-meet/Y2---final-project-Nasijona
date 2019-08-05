@@ -1,4 +1,4 @@
-from model import Base, Student
+from model import Base, Product
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

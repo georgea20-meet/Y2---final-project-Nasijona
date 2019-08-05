@@ -1,6 +1,6 @@
 from flask import Flask, request, url_for, redirect
 from flask import render_template
-from database import get_all_images, create_image
+from databases import *
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'YOUR-WILL-NEVER-GUESS'
