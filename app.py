@@ -33,6 +33,17 @@ def sammer_camp():
 
 	return render_template("sammer_camp_page.html")
 
+@app.route('/courses', methods=['GET', 'POST'])
+def go_courses():
+
+	return render_template("courses.html")
+
+@app.route('/special_events', methods=['GET', 'POST'])
+def go_special_events():
+
+	return render_template("events.html")
+
+
 @app.route('/sent_mail', methods=['GET', 'POST'])
 def message():
 	name = request.form['Name']
