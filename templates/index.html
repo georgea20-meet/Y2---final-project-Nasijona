@@ -86,7 +86,7 @@
 
             <li>
               <div style= "width:200px; height: 200px" class="timeline-image">
-                <img  class="rounded-circle img-fluid" src="/static/img/about12.jpg" alt="" style="height: 200px;">
+                <img  class="rounded-circle img-fluid" src="/static/img/about12.jpg" alt="" style="height: 200px; width: 200px;">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -204,10 +204,10 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="/static/img/nasijona_mandala.jpg" alt="">
+            <img class="img-fluid" src="/static/img/nasijona_mandala.jpg" style="width: 400px;height: 300px;" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>progect1</h4>
+            <h4>project1</h4>
             <p class="text-muted">Price</p>
           </div>
         </div>
@@ -218,7 +218,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="/static/img/portfolio/02-thumbnail.jpg" alt="">
+            <img class="img-fluid" src="/static/img/pro2.jpg" style="width: 400px;height: 300px;" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>project2</h4>
@@ -232,7 +232,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="/static/img/portfolio/03-thumbnail.jpg" alt="">
+            <img class="img-fluid" src="/static/img/pro3.jpg" style="width: 400px;height: 300px;" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>project3</h4>
@@ -246,7 +246,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="/static/img/portfolio/04-thumbnail.jpg" alt="">
+            <img class="img-fluid" src="/static/img/pro4.jpg" style="width: 400px;height: 300px;"alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Project4</h4>
@@ -260,7 +260,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="/static/img/portfolio/05-thumbnail.jpg" alt="">
+            <img class="img-fluid" src="/static/img/pro5.jpg" style="width: 400px;height: 300px;"alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Project5</h4>
@@ -274,7 +274,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="/static/img/portfolio/06-thumbnail.jpg" alt="">
+            <img class="img-fluid" src="/static/img/pro6.jpg" style="width: 400px;height: 300px;"alt="">
           </a>
           <div class="portfolio-caption">
             <h4>project6</h4>
@@ -287,168 +287,176 @@
 
  <!-- Gallery-->
   <section id="gallery">
-    <style type="text/css">
-      * {box-sizing:border-box}
+    <style>
+      * {box-sizing: border-box}
+      body {font-family: Verdana, sans-serif; margin:0}
+      .mySlides {display: none}
+      img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+      /* On hover, add a black background color with a little bit see-through */
+      .prev, .next{
+        background-color: rgba(192,192,192,0.3);
+      }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+      .active, .dot:hover {
+        background-color: #717171;
+      }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+      /* Fading animation */
+/*      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+      @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-.slideshow-container img{
-  position: relative;
-  top: 50%;
-  left: 13%;
-}
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+*/
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+      }
     </style>
-     <div class="slideshow-container">
 
-      <div style="opacity:1" class="mySlides fade">
-        <div  style="opacity:1" class="numbertext">1 / 3</div>
-        <img style="opacity:1" src="/static/home/student/Desktop/NasiJona/tecsture.png" style="width:50%">
-        <div class="text">Caption Text</div>
+    <div class="slideshow-container">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="/static/img/gal1.jpg" style="width: 1000px ;height: 700px;">
       </div>
 
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img style="opacity:1" src="/static/home/student/Downloads/photos=/IMG_4244.JPG" style="width:5%">
-        <div class="text">Caption Two</div>
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="/static/img/gal2.jpg" style="width: 1000px; height: 700px;">
       </div>
 
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img style="opacity:1" src="/static/home/student/Downloads/photos=/IMG_4246.JPG" style="width :5%">
-        <div class="text">Caption Three</div>
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="/static/img/gal3.jpg" style="width:1000px;height: 700px;">
       </div>
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="/static/img/gal4.jpg" style="width:1000px;height: 700px;">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="/static/img/gal3.jpg" style="width:1000px;height: 700px;">
+      </div>
+
+
 
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
     </div>
-<br>
+    <br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>      
+      <span class="dot" onclick="currentSlide(5)"></span> 
+    </div>
 
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+
 
   </section>
   
@@ -464,21 +472,21 @@ function showSlides(n) {
       <div class="row">
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="/static/img/team/1.jpg" alt="">
+            <img class="mx-auto rounded-circle" src="/static/img/sum4.jpg" alt="">
             <h3>Summer Camps</h3>
             <a class="text-muted" href="{{url_for('sammer_camp')}}">Check it</a>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="/static/img/team/2.jpg" alt="">
+            <img class="mx-auto rounded-circle" src="/static/img/cour.jpg" alt="">
             <h3>Courses</h3>
             <a class="text-muted" href="{{url_for('go_courses')}}">Check it</a>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="/static/img/team/3.jpg" alt="">
+            <img class="mx-auto rounded-circle" src="/static/img/sum3.jpg" alt="">
             <h3>Special Events</h3>
             <a class="text-muted" href="{{url_for('go_special_events')}}">Check it</a>
           </div>
@@ -619,7 +627,7 @@ function showSlides(n) {
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project 2</h2>
-                <img class="img-fluid d-block mx-auto" src="/static/img/portfolio/02-full.jpg" alt="">
+                <img class="img-fluid d-block mx-auto" src="/static/img/pro2.jpg" alt="">
                 <p class="item-intro text-muted">Name:<br> Price</p>
 
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -648,7 +656,7 @@ function showSlides(n) {
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project3</h2>
-                <img class="img-fluid d-block mx-auto" src="/static/img/portfolio/03-full.jpg" alt="">
+                <img class="img-fluid d-block mx-auto" src="/static/img/pro3.jpg" alt="">
                 <p class="item-intro text-muted">Name:<br>Price.</p>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -676,7 +684,7 @@ function showSlides(n) {
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project4</h2>
-                <img class="img-fluid d-block mx-auto" src="/static/img/portfolio/04-full.jpg" alt="">
+                <img class="img-fluid d-block mx-auto" src="/static/img/pro4.jpg" alt="">
                 <p class="item-intro text-muted">Name:<br>Price</p>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -704,7 +712,7 @@ function showSlides(n) {
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">project5</h2>
-                <img class="img-fluid d-block mx-auto" src="/static/img/portfolio/05-full.jpg" alt="">
+                <img class="img-fluid d-block mx-auto" src="/static/img/pro5.jpg" alt="">
                 <p class="item-intro text-muted">Name:<br>Price.</p>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -732,7 +740,7 @@ function showSlides(n) {
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project6<h2>
-                <img class="img-fluid d-block mx-auto" src="/static/img/portfolio/06-full.jpg" alt="">
+                <img class="img-fluid d-block mx-auto" src="/static/img/pro6.jpg" alt="">
                 <p class="item-intro text-muted">Name:<br>Price.</p>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
