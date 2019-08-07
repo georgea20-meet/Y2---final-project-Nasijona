@@ -50,7 +50,7 @@ def message():
 	message = request.form['Message']
 	mail = request.form['Mail']
 	phone = request.form['Phone']
-	msg = Message(' for Nasijona ', sender = 'nasijona.contect@gmail.com', recipients = ['amitper111@gmail.com'])
+	msg = Message(' for Nasijona ', sender = 'nasijona.contect@gmail.com', recipients = ['nasijona.nazareth@gmail.com'])
 	msg.body = "for Nasijona "+ " \n"+ message + " \n" + "name:"+ name + " \n" +" phone namber: "+phone + " \n"+" email " +mail
 	email.send(msg)
 	return render_template("index.html")
